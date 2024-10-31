@@ -173,7 +173,7 @@ export const RevokeView: FC = ({}) => {
               <ul className="text-xs sm:text-xl">
                 <li>
                   <Link href="/">
-                    <a>SOLANA-TOOLS</a>
+                    <a>Sol-Manage</a>
                   </Link>
                 </li>
               </ul>

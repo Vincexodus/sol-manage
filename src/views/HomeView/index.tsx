@@ -8,7 +8,7 @@ import styles from "./index.module.css";
 
 const walletPublicKey = "";
 
-export const HomeView: FC = ({ }) => {
+export const HomeView: FC = ({}) => {
   const { publicKey } = useWallet();
   const [walletToParsePublicKey, setWalletToParsePublicKey] =
     useState<string>(walletPublicKey);
@@ -28,7 +28,7 @@ export const HomeView: FC = ({ }) => {
               <ul className="text-xs sm:text-xl">
                 <li>
                   <Link href="/">
-                    <a>SOLANA-TOOLS</a>
+                    <a>Sol-Manage</a>
                   </Link>
                 </li>
               </ul>
@@ -39,7 +39,6 @@ export const HomeView: FC = ({ }) => {
             <ConnectWallet onUseWalletClick={onUseWalletClick} />
           </div>
         </div>
-
         <div className="text-center pt-2">
           <div className="hero min-h-16 py-4">
             <div className="text-center hero-content">
@@ -48,7 +47,8 @@ export const HomeView: FC = ({ }) => {
                   Hello Solana <SolanaLogo /> World!
                 </h1>
                 <p className="mb-2">
-                  This website includes amazing tools to help you in the solana ecosystem.
+                  This website includes amazing tools to help you in the solana
+                  ecosystem.
                 </p>
               </div>
             </div>
@@ -58,72 +58,50 @@ export const HomeView: FC = ({ }) => {
             {/* <h1 className="mb-2 pb-8 text-5xl">Available tools :</h1> */}
             <ul className="text-left leading-10">
               <li className="mb-5">
-                <Link href="/burnNFT">
-                  <div className="p-4 hover:border">
-                    <a className="text-4xl font-bold mb-5">
-                      🔥 -- Burn NFT
-                    </a>
-                    <div>A UI to burn Solana NFTs and get SOL back</div></div>
-                </Link>
-
-              </li>
-              <li className="mb-5">
-                <Link href="/burnSPL">
-                  <div className="p-4 hover:border">
-                    <a className="text-4xl font-bold mb-5">
-                      🔥 -- Burn SPL token
-                    </a>
-                    <div>A UI to burn SPL tokens and get SOL back</div></div>
-                </Link>
-
-              </li>
-              <li className="mb-5">
-                <Link href="/closeaccount">
-                  <div className="p-4 hover:border">
-                    <a className="text-4xl font-bold mb-5">
-                      🔒 -- Close empty account
-                    </a>
-                    <div>A UI to close empty account of unused token and get SOL back</div></div>
-                </Link>
-
-              </li>
-              <li className="mb-5">
-                <Link href="/revoke">
-                  <div className="p-4 hover:border">
-                    <a className="text-4xl font-bold mb-5">
-                      🚫 -- Revoke authority
-                    </a>
-                    <div>A UI to view the tokens you have delegated rights to and revoke them </div></div>
-                </Link>
-
-              </li>
-              <li className="mb-5">
                 <Link href="https://token-creator-fix.vercel.app/">
                   <div className="p-4 hover:border">
                     <a className="mb-5 text-4xl font-bold">
-                      🧪 -- SPL Token Creator
+                      🧪 SPL Token Creator
                     </a>
-                    <div>A UI to create your own Solana token</div>
+                    <div>A UI to create your own Solana token (original Token/Token-2022)</div>
                   </div>
                 </Link>
               </li>
               <li className="mb-5">
-                <Link href="/createNFTcollection">
+                <Link href="/burnSPL">
                   <div className="p-4 hover:border">
-                    <a className="mb-5 text-4xl font-bold">
-                      🖼️ -- Create NFT Collection
-                    </a>
-                    <div>A UI to create and migrate NFTs to a Collection</div>
+                    <a className="text-4xl font-bold mb-5">🔥 Burn SPL token</a>
+                    <div>A UI to burn SPL tokens and get SOL back</div>
                   </div>
                 </Link>
               </li>
               <li className="mb-5">
                 <Link href="/multisender">
                   <div className="p-4 hover:border">
+                    <a className="mb-5 text-4xl font-bold">📨 Multi Sender</a>
+                    <div>
+                      A UI to send multiple tokens in 1 transaction (same token
+                      to different people/many tokens to one person)
+                    </div>
+                  </div>
+                </Link>
+              </li>
+              <hr className="my-5" />
+              <li className="mb-5">
+                <Link href="/createNFTcollection">
+                  <div className="p-4 hover:border">
                     <a className="mb-5 text-4xl font-bold">
-                      📨 📨 📨  -- Multi Sender
+                      🖼️ Create NFT Collection
                     </a>
-                    <div>A UI to send multiple tokens in 1 transaction (same token to different people/many tokens to one person)</div>
+                    <div>A UI to create and migrate NFTs to a Collection</div>
+                  </div>
+                </Link>
+              </li>
+              <li className="mb-5">
+                <Link href="/burnNFT">
+                  <div className="p-4 hover:border">
+                    <a className="text-4xl font-bold mb-5">🔥 Burn NFT</a>
+                    <div>A UI to burn Solana NFTs and get SOL back</div>
                   </div>
                 </Link>
               </li>
@@ -131,32 +109,60 @@ export const HomeView: FC = ({ }) => {
                 <Link href="/updateNFTmetadata">
                   <div className="p-4 hover:border">
                     <a className="mb-5 text-4xl font-bold">
-                      ✍️ -- Update NFT metadata
+                      ✍️ Update NFT metadata
                     </a>
                     <div>A UI to update the metadata of your NFT</div>
+                  </div>
+                </Link>
+              </li>
+              <hr className="my-5" />
+              <li className="mb-5">
+                <Link href="/revoke">
+                  <div className="p-4 hover:border">
+                    <a className="text-4xl font-bold mb-5">
+                      🚫 Revoke authority
+                    </a>
+                    <div>
+                      A UI to view the tokens you have delegated rights to and
+                      revoke them{" "}
+                    </div>
                   </div>
                 </Link>
               </li>
               <li className="mb-5">
                 <Link href="/upload">
                   <div className="p-4 hover:border">
-                    <a className="mb-5 text-4xl font-bold">
-                      📤 -- Upload file
-                    </a>
+                    <a className="mb-5 text-4xl font-bold">📤 -- Upload file</a>
                     <div>A UI to upload file to Arweave</div>
                   </div>
                 </Link>
               </li>
+
               <li className="mb-5">
                 <Link href="/suatmm">
                   <div className="p-4 hover:border">
                     <a className="text-4xl font-bold mb-5">
-                      📨 -- Send NFT message
+                      📨 Send NFT message
                     </a>
-                    <div>A UI to send a message to the owner of the NFT, the .sol domain name or ANS you want</div>
+                    <div>
+                      A UI to send a message to the owner of the NFT, the .sol
+                      domain name or ANS you want
+                    </div>
                   </div>
                 </Link>
-
+              </li>
+              <li className="mb-5">
+                <Link href="/closeaccount">
+                  <div className="p-4 hover:border">
+                    <a className="text-4xl font-bold mb-5">
+                      🔒 Close empty account
+                    </a>
+                    <div>
+                      A UI to close empty account of unused token and get SOL
+                      back
+                    </div>
+                  </div>
+                </Link>
               </li>
             </ul>
           </div>

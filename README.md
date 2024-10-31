@@ -1,4 +1,15 @@
-# Solana-Tools
+# Sol-Manage
+
+A fork of [solana-tools](https://github.com/cryptoloutre/solana-tools.git)
+
+Token manager website for minting and managing fungible tokens, NFTs, and collections. 
+- Connect wallet
+- Option to choose origin Token or Token-2022 standard for new fungibles or NFT creation
+- Option to choose which Metaplex program to be used when minting NFTs (Token Metadata, Core, Bubblegum)
+- Manage NFT collections
+
+* Bonus points for including other token features such as burning, transferring, delegating, and closing accounts.
+
 
 A bunch of tools to help people in the Solana ecosystem. This website includes:
 - a UI to burn Solana NFTs
@@ -17,21 +28,6 @@ Download our xNFT [here](https://test.xnft.gg/app/621U7cWfav4ypS7e7uxdXcZTjTFgke
 ## Demo:
 - Mainnet: https://solanatools.vercel.app/
 - Devnet: https://solanatools-devnet.vercel.app/
-
-## Tips
-Donations can be made at `solanatools.sol` if you are feeling generous and want to support me!
-
-## Getting Started
-
-Clone the repo, install the dependencies and run `yarn run dev` to run the development server.
-
-```bash
-git clone https://github.com/cryptoloutre/solana-tools.git
-cd solana-tools
-yarn install
-yarn run dev
-```
-
 
 ## Burn NFT UI
 A UI for burning Solana NFTs and getting back $SOL from the associated token account.
